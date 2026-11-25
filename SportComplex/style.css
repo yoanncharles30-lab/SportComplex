@@ -1,0 +1,197 @@
+/* ===== SportComplex : feuille de style commune (toutes les pages) ===== */
+:root{
+  --noir:#0D0D0D; --anthracite:#1E1E1E; --orange:#FF5A1F; --jaune:#FFD400; --blanc:#fff; --gris:#B8B8B8;
+  --titre:'Oswald','Arial Narrow',Impact,sans-serif; --texte:'Inter',Arial,sans-serif;
+  --rayon:6px; --ombre:0 10px 28px rgba(0,0,0,.35); --pad:clamp(3rem,7vw,5.5rem); --diag:clamp(1.5rem,4vw,3.5rem);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--noir);color:var(--blanc);font:400 1.05rem/1.6 var(--texte)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--jaune);outline-offset:3px}
+h1,h2,h3{font-family:var(--titre);text-transform:uppercase;line-height:1.05;letter-spacing:.01em}
+h1{font-size:clamp(3rem,9vw,6.5rem)} h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:1.5rem} h3{font-size:1.5rem;margin-bottom:.5rem}
+.conteneur{width:min(1160px,92%);margin-inline:auto}
+.intro{max-width:62ch;margin-bottom:2rem}
+
+/* Bandeau d'annonce */
+.bandeau{background:var(--jaune);color:var(--noir);text-align:center;font-weight:600;padding:.6rem 1rem;font-size:.95rem}
+
+/* En-tête et menu */
+.entete{position:sticky;top:0;z-index:50;background:var(--noir);border-bottom:3px solid var(--orange)}
+.entete .conteneur{display:flex;align-items:center;justify-content:space-between;min-height:68px}
+.logo{font:700 1.7rem var(--titre);text-decoration:none;letter-spacing:.04em}
+.logo span{color:var(--orange)}
+.menu{display:flex;align-items:center;gap:1.6rem}
+.menu a{text-decoration:none;font:500 1rem var(--titre);text-transform:uppercase;letter-spacing:.06em;padding:.3rem 0;border-bottom:3px solid transparent}
+.menu a:not(.btn):hover,.menu a[aria-current="page"]{border-color:var(--jaune)}
+.burger{display:none;background:none;border:2px solid var(--blanc);color:var(--blanc);font:600 .9rem var(--titre);text-transform:uppercase;padding:.4rem .8rem;border-radius:var(--rayon);cursor:pointer}
+
+/* Boutons (coupe oblique sportive) */
+.btn{display:inline-block;background:var(--orange);color:var(--noir);font:700 1.05rem var(--titre);text-transform:uppercase;letter-spacing:.06em;text-decoration:none;padding:.85rem 1.8rem;border:2px solid var(--orange);border-radius:var(--rayon);clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-3px);background:var(--jaune);border-color:var(--jaune)}
+.btn-jaune{background:var(--jaune);border-color:var(--jaune)} .btn-jaune:hover{background:var(--blanc);border-color:var(--blanc)}
+.btn-noir{background:var(--noir);border-color:var(--noir);color:var(--blanc)} .btn-noir:hover{background:var(--blanc);border-color:var(--blanc);color:var(--noir)}
+.btn-contour{background:transparent;color:var(--blanc);border-color:var(--blanc)} .btn-contour:hover{background:var(--blanc);color:var(--noir)}
+.btn-menu{padding:.5rem 1.2rem;font-size:.95rem}
+.actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.8rem}
+
+/* Sections : alternance sombre / vive (coupes en diagonale) */
+.section-sombre{background:var(--noir);padding:var(--pad) 0}
+.section-vive{background:var(--orange);color:var(--noir);padding:calc(var(--pad) + var(--diag)) 0;margin:calc(var(--diag) * -1) 0;
+  clip-path:polygon(0 var(--diag),100% 0,100% calc(100% - var(--diag)),0 100%);position:relative}
+.section-vive .carte{background:var(--noir);color:var(--blanc)}
+.section-vive .btn{background:var(--noir);border-color:var(--noir);color:var(--blanc)}
+.section-vive .btn:hover{background:var(--blanc);border-color:var(--blanc);color:var(--noir)}
+
+/* Hero */
+.hero{position:relative;min-height:80vh;display:flex;align-items:center;background:linear-gradient(135deg,var(--anthracite),var(--noir));overflow:hidden;padding:var(--pad) 0 calc(var(--pad) + var(--diag))}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.45}
+.hero .conteneur{position:relative}
+.hero h1 span{color:var(--orange)}
+.slogan{font:500 clamp(1.4rem,3.5vw,2.2rem) var(--titre);text-transform:uppercase;color:var(--jaune);margin:.8rem 0 1.2rem}
+.hero p.intro{font-size:1.2rem}
+
+/* Grilles et cartes */
+.grille{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.carte{background:var(--anthracite);border-radius:var(--rayon);overflow:hidden;box-shadow:var(--ombre);display:flex;flex-direction:column}
+.carte-corps{padding:1.3rem;display:flex;flex-direction:column;gap:.6rem;flex:1}
+.carte-img{aspect-ratio:4/3;background:linear-gradient(135deg,var(--orange),var(--anthracite));object-fit:cover;width:100%}
+.carte a.lien{margin-top:auto;font:600 1rem var(--titre);text-transform:uppercase;color:var(--jaune);text-decoration:none}
+.carte a.lien:hover{text-decoration:underline}
+.badge{display:inline-block;align-self:flex-start;background:var(--jaune);color:var(--noir);font:700 .85rem var(--titre);text-transform:uppercase;padding:.2rem .7rem;border-radius:99px}
+.prix{font:700 2.6rem var(--titre)} .prix small{font-size:1rem;color:var(--gris);font-weight:400}
+.carte.vedette{outline:3px solid var(--jaune)}
+
+/* Chiffres clés */
+.chiffres{text-align:center}
+.chiffre{font:700 clamp(3rem,8vw,5rem) var(--titre);line-height:1} .chiffre-label{font-weight:600}
+.atout h3{color:var(--jaune)}
+
+/* Tableaux */
+.tableau-responsive{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:320px}
+th,td{padding:.7rem 1rem;text-align:left;border-bottom:1px solid rgba(0,0,0,.35)}
+th{font-family:var(--titre);text-transform:uppercase}
+
+/* Témoignages */
+blockquote{font-size:1.05rem;font-style:italic}
+.auteur{display:flex;align-items:center;gap:.8rem;margin-top:auto}
+.auteur img{width:56px;height:56px;border-radius:50%;object-fit:cover;background:var(--orange)}
+.auteur small{display:block;color:var(--gris)}
+
+/* Pied de page */
+.pied{background:var(--anthracite);border-top:3px solid var(--orange);padding:3rem 0 1.5rem;font-size:.95rem}
+.pied h2{font-size:1.2rem;color:var(--jaune);margin-bottom:.8rem}
+.pied ul{list-style:none;padding:0} .pied li{margin-bottom:.3rem}
+.pied a{text-decoration:none} .pied a:hover{color:var(--jaune);text-decoration:underline}
+.mentions{margin-top:2rem;padding-top:1rem;border-top:1px solid #444;color:var(--gris);font-size:.85rem}
+
+/* Adaptatif */
+@media (max-width:900px){
+  .burger{display:block}
+  .menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--noir);flex-direction:column;align-items:flex-start;padding:1.2rem 4%;gap:1rem;border-bottom:3px solid var(--orange)}
+  .menu.ouvert{display:flex}
+  .hero{min-height:70vh}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* === PAGE LE PROJET === */
+.sommaire{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.8rem}
+.sommaire a{border:2px solid var(--orange);border-radius:99px;padding:.3rem 1rem;font:500 .95rem var(--titre);text-transform:uppercase;text-decoration:none}
+.sommaire a:hover{background:var(--orange);color:var(--noir)}
+.valeur{background:var(--noir);color:var(--jaune);font:700 clamp(1.5rem,3.5vw,2.4rem)/1.15 var(--titre);text-transform:uppercase;padding:1.6rem;border-left:10px solid var(--jaune);margin:1.5rem 0}
+.pastilles{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0}
+.pastilles li{background:var(--noir);color:var(--blanc);border-radius:99px;padding:.2rem .9rem;font-size:.9rem}
+.persona .carte-corps dt{font:600 1rem var(--titre);text-transform:uppercase;color:var(--jaune)}
+.persona .carte-corps dd{margin:0 0 .5rem}
+.persona blockquote{border-left:4px solid var(--orange);padding-left:1rem}
+.smart{list-style:none;padding:0;font-size:.95rem} .smart li{margin-bottom:.35rem} .smart b{color:var(--jaune);display:inline-block;width:1.4rem}
+.badge-chaud{background:var(--orange)} .badge-tiede{background:var(--jaune)} .badge-froid{background:#6EC6FF}
+.pipeline{display:flex;gap:1rem;list-style:none;padding:0;counter-reset:etape}
+.pipeline li{flex:1;counter-increment:etape;background:var(--noir);color:var(--blanc);border-radius:var(--rayon);padding:1.1rem;border-top:6px solid var(--jaune)}
+.pipeline li::before{content:counter(etape);font:700 2rem var(--titre);color:var(--orange)}
+.pipeline strong{display:block;font:600 1.2rem var(--titre);text-transform:uppercase}
+.pipeline .taux{color:var(--jaune);font-weight:600}
+.section-sombre th,.section-sombre td{border-color:#444;vertical-align:top}
+.section-sombre caption,.section-vive caption{text-align:left;font:600 1.2rem var(--titre);text-transform:uppercase;margin-bottom:.5rem}
+.encadre{border:3px solid var(--jaune);border-radius:var(--rayon);padding:1.3rem;margin:1.5rem 0}
+.frise{list-style:none;padding:0;border-left:4px solid var(--orange)} .frise li{padding:0 0 1rem 1.2rem} .frise b{color:var(--jaune)}
+@media (max-width:900px){.pipeline{flex-direction:column}}
+
+/* === PAGE ÉQUIPE === */
+.fondateur{display:grid;grid-template-columns:minmax(240px,380px) 1fr;gap:2.5rem;align-items:start}
+.fondateur .portrait{border-radius:var(--rayon);aspect-ratio:6/7;object-fit:cover;width:100%;background:linear-gradient(135deg,var(--noir),var(--anthracite));border-bottom:8px solid var(--noir)}
+.fondateur h3{margin-top:1.2rem}
+.citation{background:var(--noir);color:var(--jaune);font:700 clamp(1.4rem,3vw,2rem)/1.2 var(--titre);text-transform:uppercase;padding:1.4rem;border-left:10px solid var(--jaune);margin:1.5rem 0}
+.citation cite{display:block;font:400 .95rem var(--texte);color:var(--blanc);text-transform:none;margin-top:.6rem}
+.membre-img{aspect-ratio:6/7}
+.membre .role{color:var(--jaune);font:600 1rem var(--titre);text-transform:uppercase}
+.carte.responsable{outline:3px solid var(--jaune)}
+@media (max-width:900px){.fondateur{grid-template-columns:1fr}}
+
+/* === PAGE OFFRES === */
+.onglets{position:sticky;top:71px;z-index:40;background:var(--anthracite);border-bottom:2px solid var(--orange)}
+.onglets .conteneur{display:flex;gap:.5rem;overflow-x:auto;padding:.6rem 0;white-space:nowrap}
+.onglets a{font:500 .95rem var(--titre);text-transform:uppercase;text-decoration:none;padding:.3rem 1rem;border-radius:99px;border:2px solid transparent}
+.onglets a:hover{border-color:var(--jaune);color:var(--jaune)}
+.sport-img{aspect-ratio:3/2;object-fit:cover;width:100%;max-height:420px;border-radius:var(--rayon);margin-bottom:1.5rem;background:linear-gradient(135deg,var(--orange),var(--anthracite))}
+.sport-bloc{margin-top:2rem}
+.coachs{list-style:none;padding:0;display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.coachs li{background:var(--anthracite);border-left:5px solid var(--jaune);border-radius:var(--rayon);padding:.8rem 1rem}
+.section-vive .coachs li{background:var(--noir);color:var(--blanc)}
+.coachs strong{display:block;font:600 1.1rem var(--titre);text-transform:uppercase}
+.planning{min-width:480px}
+.planning tbody th{white-space:nowrap}
+.note{font-size:.95rem;margin-top:.6rem;opacity:.9}
+.produits{grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:1rem}
+.produit img{aspect-ratio:1/1;object-fit:cover;width:100%;background:linear-gradient(135deg,var(--anthracite),#333)}
+.produit .carte-corps{padding:.8rem;gap:.2rem}
+.produit h4{font:500 1rem var(--texte);text-transform:none}
+.produit .prix-p{font:700 1.4rem var(--titre);color:var(--jaune)}
+.categorie{margin:2rem 0 1rem}
+.section-sombre .pastilles li{background:var(--anthracite);border:1px solid var(--orange)}
+
+/* === PAGE TARIFS === */
+.economie{color:var(--jaune);font-weight:600}
+.tarif .annuel{border-top:1px solid #444;padding-top:.6rem}
+.tarif .annuel strong{font:700 1.6rem var(--titre)}
+.reductions{list-style:none;padding:0;display:grid;gap:.4rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.reductions li::before{content:"\2713\00a0";color:var(--orange);font-weight:700}
+.section-vive .encadre{border-color:var(--noir)}
+.galerie{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem}
+.galerie figure{margin:0;background:var(--anthracite);border-radius:var(--rayon);overflow:hidden}
+.galerie a{display:block;overflow:hidden}
+.galerie img{aspect-ratio:3/2;object-fit:cover;width:100%;background:linear-gradient(135deg,var(--orange),var(--anthracite));transition:transform .3s}
+.galerie a:hover img,.galerie a:focus-visible img{transform:scale(1.07)}
+.galerie figcaption{padding:.6rem .9rem;font-size:.9rem}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:100;align-items:center;justify-content:center;flex-direction:column;gap:1rem;padding:1rem}
+.lightbox:target{display:flex}
+.lightbox img{max-width:92vw;max-height:78vh;border-radius:var(--rayon)}
+.lightbox a{font:600 1rem var(--titre);text-transform:uppercase;background:var(--jaune);color:var(--noir);padding:.5rem 1.2rem;border-radius:99px;text-decoration:none}
+.stars{color:var(--jaune);letter-spacing:.15em}
+.temoin .auteur img{width:64px;height:64px}
+.defil{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:.3rem .2rem 1rem}
+.defil>article{flex:0 0 min(300px,80%);scroll-snap-align:start}
+.defil .badge{margin-bottom:.2rem}
+.indice{font-size:.9rem;color:var(--gris);margin-bottom:.8rem}
+details{background:var(--noir);color:var(--blanc);border-radius:var(--rayon);margin-bottom:.7rem;border-left:5px solid var(--jaune)}
+summary{cursor:pointer;padding:1rem 1.2rem;font:500 1.15rem var(--titre);text-transform:uppercase;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;color:var(--jaune);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"\2212"}
+details p{padding:0 1.2rem 1.1rem}
+.contacts td a{color:var(--jaune)}
+
+/* === PAGE INSCRIPTION === */
+.bandeau-page{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--anthracite),var(--noir));padding:var(--pad) 0 calc(var(--pad) + var(--diag))}
+.bandeau-page>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35}
+.bandeau-page .conteneur{position:relative}
+.formulaire{background:#fff;border-radius:var(--rayon);overflow:hidden;box-shadow:var(--ombre)}
+.formulaire iframe{display:block;width:100%;height:1200px;border:0}
+.lien-secours{margin-top:1.2rem;font-weight:600}
+.rgpd dt{font:600 1rem var(--titre);text-transform:uppercase;color:var(--jaune);margin-top:.7rem}
+.rgpd dd{margin:0}
+.contact-alt a{color:var(--jaune)}
+@media (max-width:600px){.formulaire iframe{height:1500px}}

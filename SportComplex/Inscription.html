@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inscription et séance d'essai gratuite | SportComplex</title>
+<meta name="description" content="Réservez votre séance d'essai gratuite chez SportComplex : remplissez le formulaire et recevez une réponse sous 48 h. Devis gratuit pour les entreprises.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="entete">
+  <div class="conteneur">
+    <a class="logo" href="index.html">SPORT<span>COMPLEX</span></a>
+    <button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav class="menu" id="menu" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="projet.html">Le projet</a>
+      <a href="equipe.html">Équipe</a>
+      <a href="offres.html">Offres</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="inscription.html" class="btn btn-menu" aria-current="page">Essai gratuit</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- BANDEAU D'EN-TÊTE (sombre) -->
+<section class="section-sombre bandeau-page">
+  <img src="images/inscription-bandeau.webp" alt="Un coach accueille de nouveaux adhérents à l'entrée du complexe SportComplex" width="1600" height="500">
+  <div class="conteneur">
+    <h1>Inscription et séance d'essai</h1>
+    <p class="slogan">Votre premier essai est offert</p>
+    <p class="intro">Remplissez le formulaire ci-dessous : en échange, vous recevez une réponse sous 48 h et une séance d'essai gratuite dans le sport de votre choix. Entreprises : nous vous envoyons un devis gratuit. Vous pouvez aussi demander une visite du complexe sur rendez-vous.</p>
+    <ul class="pastilles">
+      <li>Essai gratuit</li><li>Sans engagement</li><li>Réponse sous 48 h</li><li>Annulation possible</li>
+    </ul>
+  </div>
+</section>
+
+<!-- FORMULAIRE (vive) -->
+<section class="section-vive" id="formulaire">
+  <div class="conteneur">
+    <h2>Je m'inscris</h2>
+    <!-- ===== REMPLACER LE LIEN PAR CELUI DU GOOGLE FORM (attribut src ci-dessous et lien de secours) ===== -->
+    <div class="formulaire">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfIkEtDx50XNZAOtRP9f3KXJgydl9pvqOdRBkJHjuHi83uyLA/viewform?embedded=true"
+              width="100%" height="1200" title="Formulaire d'inscription SportComplex" loading="lazy">
+        Chargement…
+      </iframe>
+    </div>
+    <p class="lien-secours"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfIkEtDx50XNZAOtRP9f3KXJgydl9pvqOdRBkJHjuHi83uyLA/viewform" target="_blank" rel="noopener" style="text-decoration:underline">Le formulaire ne s'affiche pas ? Ouvrir le formulaire dans un nouvel onglet</a></p>
+  </div>
+</section>
+
+<!-- RGPD ET CONTACT (sombre) -->
+<section class="section-sombre" id="donnees">
+  <div class="conteneur grille" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:start">
+    <div class="encadre">
+      <h2 style="font-size:1.8rem">Vos données personnelles</h2>
+      <dl class="rgpd">
+        <dt>Finalité</dt><dd>Répondre à votre demande et organiser votre séance d'essai.</dd>
+        <dt>Base légale</dt><dd>Votre consentement.</dd>
+        <dt>Données collectées</dt><dd>Nom, e-mail, téléphone, activité souhaitée.</dd>
+        <dt>Durée de conservation</dt><dd>3 ans après le dernier contact.</dd>
+        <dt>Destinataires</dt><dd>L'équipe SportComplex uniquement.</dd>
+        <dt>Vos droits</dt><dd>Accès, rectification et suppression, à exercer auprès de <a href="mailto:dpo@sportcomplex.fr" style="color:var(--jaune)">dpo@sportcomplex.fr</a>.</dd>
+      </dl>
+      <!-- Remplacer # par l'adresse de la page « Politique de confidentialité & cookies » quand elle existera -->
+      <p style="margin-top:.8rem"><a href="#" style="color:var(--jaune);text-decoration:underline">Lire la politique de confidentialité</a></p>
+    </div>
+    <div class="contact-alt">
+      <h2 style="font-size:1.8rem">Vous préférez nous parler ?</h2>
+      <p>Appelez-nous au <a href="tel:+33163502204">01 63 50 22 04</a> ou écrivez à <a href="mailto:contact@sportcomplex.fr">contact@sportcomplex.fr</a>.</p>
+      <p><strong>Horaires d'accueil</strong><br>Lundi au vendredi : 6h30 à 22h00<br>Samedi : 8h00 à 20h00<br>Dimanche : 9h00 à 13h00</p>
+      <p>Route des Sports, 77000 Villeneuve-les-Prés : parking gratuit de 150 places.</p>
+      <div class="actions"><a class="btn btn-contour" href="tarifs.html#contact">Tous nos contacts</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ÉTAPES (vive) -->
+<section class="section-vive" id="etapes">
+  <div class="conteneur">
+    <h2>Ce qui se passe après votre inscription</h2>
+    <ol class="pipeline">
+      <li><strong>Notre réponse</strong>Sous 48 h, un membre de l'équipe vous contacte pour répondre à vos questions et fixer la date de votre essai.</li>
+      <li><strong>Votre séance d'essai</strong>Vous venez essayer gratuitement le sport de votre choix, avec un coach pour vous accueillir. Visite du complexe possible sur rendez-vous.</li>
+      <li><strong>Le choix de votre formule</strong>Séance, carnet de 10 séances ou abonnement : nous vous aidons à choisir, sans engagement.</li>
+    </ol>
+    <div class="actions"><a class="btn" href="tarifs.html#abonnements">Voir les abonnements</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="pied">
+  <div class="conteneur grille">
+    <div><h2>SportComplex</h2><p>Route des Sports<br>77000 Villeneuve-les-Prés</p>
+      <p><a href="tel:+33163502204">01 63 50 22 04</a><br><a href="mailto:contact@sportcomplex.fr">contact@sportcomplex.fr</a></p>
+      <p>Lun-ven : 6h30-22h00<br>Sam : 8h00-20h00<br>Dim : 9h00-13h00</p></div>
+    <div><h2>Menu</h2><ul><li><a href="index.html">Accueil</a></li><li><a href="projet.html">Le projet</a></li><li><a href="equipe.html">Équipe</a></li><li><a href="offres.html">Offres</a></li><li><a href="tarifs.html">Tarifs</a></li><li><a href="inscription.html">Essai gratuit</a></li></ul></div>
+    <div><h2>Suivez-nous</h2><ul><li><a href="#" rel="noopener">Instagram @sportcomplex</a></li><li><a href="#" rel="noopener">Facebook @sportcomplex</a></li><li><a href="#" rel="noopener">YouTube @sportcomplex</a></li></ul></div>
+  </div>
+  <div class="conteneur mentions"><p>Mentions légales : site édité par SportComplex, représenté par Yoann CHARLES, SIRET 000 000 000 00000 (fictif). Hébergeur : HébergPro, 10 rue du Web, 75000 Paris (fictif). <a href="#">Politique de confidentialité &amp; cookies</a> &middot; &copy; 2027 SportComplex</p></div>
+</footer>
+<script>
+const b=document.querySelector('.burger'),m=document.getElementById('menu');
+b.addEventListener('click',()=>{const o=m.classList.toggle('ouvert');b.setAttribute('aria-expanded',o)});
+</script>
+</body>
+</html>
